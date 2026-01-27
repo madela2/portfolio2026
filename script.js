@@ -18,3 +18,21 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+function scrollToProjects() {
+        const targetSection = document.getElementById("projects");
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+}
+
+function scrollToAboutMe() {
+        const targetSection = document.getElementById("about-me");
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+}
