@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawpartner - Dog Activity Tracker</title>
+</head>
+
+<body>
+    <header>
+        <a href="/index.html">Back</a>
+        <h1>Pawpartner - Dog Activity Tracker (Web of Things project)</h1>
+        <p>Pawpartner is a Web of Things prototype designed to improve dogs' wellbeing and strengthen the dog-owner
+            relationship. The system uses a wearable Micro:Bit sensor to track activity and presents the data in a
+            web-based interface with actionable insights for new dog owners.</p>
+        <ul>
+            <li>Team project with four other students</li>
+            <li>Course: Web of Things</li>
+            <li>My role: Frontend developer</li>
+            <li>Tech: Micro:Bit, Web Bluetooth, JavaScript, MongoDB</li>
+        </ul>
+        <!--Link to GitHub repo-->
+    </header>
+    <main>
+        <!--Project overview-->
+        <h2>Project overview</h2>
+        <p>Pawpartner is an activity-tracking system for dogs that combines hardware sensors and a web interface. A
+            wearable MicroBit measures data, which is transmitted via Web Bluetooth to a web application. The data is
+            stored in a database and visualozed to help owners understand whether their dog is getting enough daily
+            activity. The project focuses on making activity data easy to understand and actionable, especially for new
+            dog owners who may struggle to know how much exercise their dog needs.</p>
+        <!--Problem and goal-->
+        <!--My role and contributions-->
+        <h2>My role and contributions</h2>
+        <p>Frontend developer, with main responsibility for the monthly activity overview.</p>
+        <ul>
+            <li>Implementing the monthly activity overview</li>
+            <li>Fetching and rendering activity data from backend APIs</li>
+            <li>Collaborating cloesly with backend and hardware contributors to integrate data flow</li>
+            <li>Participating in UI and usability decisions</li>
+        </ul>
+        <!--How it works-->
+        <h2>How it works</h2>
+        <ol>
+            <li>A Micro:Bit with a built-in accelerometer tracks the dog's movement.</li>
+            <li>Activity data is sent to a web application via Web Bluetooth (BLE).</li>
+            <li>The web application sends the data to a backend using REST APIs.</li>
+            <li>Activity data is stored in a MongoDB database.</li>
+            <li>The web interface requests stored data through APIs and displays activity summaries.</li>
+            <li></li>
+        </ol>
+        <!--Teck stack-->
+        <h2>Technology stack</h2>
+        <p>Hardware</p>
+        <ul>
+            <li>Micro:Bit with built in accelerometer, Bluetooth and a battery bow with AAA-batteries</li>
+        </ul>
+        <p>Frontend</p>
+        <ul>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+        <p>Backend</p>
+        <ul>
+            <li>REST APIs</li>
+            <li>MongoDB database</li>
+        </ul>
+        <p>Why these choices?</p>
+        <ul>
+            <li>The Micro:Bit provided all required sensors and Bluetooth out of the box</li>
+            <li>Accelerometers are commonly used in fitness trackers and step counters</li>
+            <li>JavaScript was sufficient due to the project's limited scope and kept complexity manageable</li>
+            <li>MongoDB suited the time-based activity data well</li>
+        </ul>
+        <!--Key features-->
+        <h2>Key features</h2>
+        <ul>
+            <li>Wearable activity tracker for dogs</li>
+            <li>Adjustable sensitivity based on dog weight</li>
+            <li>Monthly activity overview</li>
+            <li>Activity history stored in a database</li>
+            <li>Personalized activity suggestions based on remaining daily activity needs</li>
+            <li>Relationship status calculated from the daily activity</li>
+        </ul>
+        <!--Challenges and solutions-->
+        <h2>Challenges and solutions</h2>
+        <ul>
+            <li>Bluetooth connectivity</li>
+            <ul>
+                <li>Bluetooth connections are unstable and limited in range. To handle disconnections, the Micro:Bit
+                    stores
+                    activity data locally when offline and syncs it once the connection is restored.</li>
+            </ul>
+            <li>Measuring activity accurately</li>
+            <ul>
+                <li>We implemented movement and activity thresholds that adapt based on the dog's weight.</li>
+            </ul>
+            <li>Data flow</li>
+            <ul>
+                <li>Data is exchanged using UART over Web Bluetooth, parsed in the browser, and forwarded to the backend via REST APIs.</li>
+            </ul>
+        </ul>
+        <!--What I learned-->
+        <h2>What I learned</h2>
+        <ul>
+            <li>Working with real-world sensor data</li>
+            <li>Translating technical data into user-friendly interfaces</li>
+            <li>Collaborating across hardware, backend, and frontend</li>
+        </ul>
+        <!--Next improvements-->
+        <!--Links and credits-->
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

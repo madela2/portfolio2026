@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +8,41 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <header>
         <img src="" alt="">
+        <h1>Hi! I'm Madeleine</h1>
         <button onclick="scrollToProjects('projects')">Projects</button>
         <button onclick="scrollToAboutMe('about-me')">About Me</button>
     </header>
     <section id="projects"></section>
-        <h2>Projects</h2>
-        <div class="wot-project"></div>
-            <h3>Pawpartner - Web of Things Projects</h3>
-            <p>Beskrivelse</p>
-            <p>Min rolle: Frontend, månedsoversikt</p>
-            <p>Lenke til prosjektside</p>
-            <p>Les mer</p>
-        <div class="tweemu-project"></div>
-            <h3>Tweemu - Cloud Technologies Project</h3>
-            <p>Beskrivelse</p>
-            <p>Min rolle</p>
-            <p>Lenke til prosjektside</p>
-            <p>Les mer</p>
-        <div class="ailuminate-project"></div>
-            <h3>Ailuminate - Fullstack Project</h3>
-            <p>Beskrivelse</p>
-            <p>Min rolle</p>
-            <p>Lenke til prosjektside</p>
-            <p>Les mer</p>
-    <section id="about-me"></section>
+    <h2>Projects</h2>
+    <div class="wot-project">
+        <h3>Pawpartner - Dog Activity Tracker</h3>
+        <p>A Web of Things project that tracks dog activity using a Micro:Bit, Web Bluetooth, and a web-based application.</p>
+        <a href="projects/dog-activity-tracker.html">Read more</a>
+    </div>
+    <div class="tweemu-project">
+        <h3>Tweemu - Cloud Technologies Project</h3>
+        <p>Beskrivelse</p>
+        <p>Min rolle</p>
+        <p>Lenke til prosjektside</p>
+        <p>Les mer</p>
+    </div>
+    <div class="ailuminate-project">
+        <h3>Ailuminate - Fullstack Project</h3>
+        <p>Beskrivelse</p>
+        <p>Min rolle</p>
+        <p>Lenke til prosjektside</p>
+        <p>Les mer</p>
+    </div>
+    <section id="about-me">
         <h2>About Me</h2>
-        <p>I am currently finishing my bachelor's degree in web devlopment at NTNU Gjøvik.</p>
-    <section class="skills"></section>
-        <h2>Skills(technologies I work with)</h2>
+        <p>I am currently finishing my bachelor's degree in web development at NTNU Gjøvik.</p>
+    </section>
+    <section class="skills">
+        <h2>Skills(technologies I have worked with)</h2>
         <ul>
             <li>HTML</li>
             <li>CSS</li>
@@ -56,9 +61,11 @@
             <li>MySQLWorkbench</li>
             <li>Figma</li>
         </ul>
-        <button onclick="topFunction()" id="topBtn" title="Go to top">Back to Top</button>
+    </section>
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Back to Top</button>
     <footer>
         <!-- Icons with links to LinkedIn, GitHub? and Email?-->
     </footer>
 </body>
+
 </html>
