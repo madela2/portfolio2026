@@ -10,13 +10,35 @@
 </head>
 
 <body>
-    <header>
-        <h1>Hi! I'm Madeleine</h1>
-        <p>Soon a full-stack web developer</p>
-        <button onclick="scrollToProjects('projects')">Projects</button>
-        <button onclick="scrollToAboutMe('about-me')">About Me</button>
-    </header>
+    <section class="hero-section">
+        <header class="hero">
+            <div class="hero-text">
+                <h1>Hi! I'm Madeleine</h1>
+                <p class="subtitle">Soon a full-stack web developer</p>
 
+                <div class="social-icons">
+                    <a href="https://github.com/madela2" aria-label="GitHub" target="_blank">
+                        <img src="img/github-logo.png" alt="GitHub logo">
+                    </a>
+                    <a href="https://www.linkedin.com/in/madeleine-lyseggen-aas/" aria-label="LinkedIn" target="_blank">
+                        <img src="img/linkedin-logo.png" alt="LinkedIn logo">
+                    </a>
+                </div>    
+            </div>
+            
+
+            <div class="hero-image">
+                <img src="img/portrait-nobg.png" alt="Illustration of Madeleine">
+            </div>
+        </header>
+        <div class="hero-buttons">
+            <button onclick="scrollToProjects('projects')">View my projects</button>
+            <button onclick="scrollToAboutMe('about-me')">About Me</button>    
+        </div>
+    </section>
+    
+    
+    
     <section id="projects">
         <h2>Projects</h2>
 
