@@ -2,11 +2,10 @@
 let topbutton = document.getElementById("topBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
-    {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         topbutton.style.display = "block";
     } else {
         topbutton.style.display = "none";
@@ -20,19 +19,19 @@ function topFunction() {
 }
 
 function scrollToProjects() {
-        const targetSection = document.getElementById("projects");
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
+    const targetSection = document.getElementById("projects");
+    if (targetSection) {
+        targetSection.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
 }
 
 function scrollToAboutMe() {
-        const targetSection = document.getElementById("about-me");
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
+    const targetSection = document.getElementById("about-me");
+    if (targetSection) {
+        targetSection.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
 }
