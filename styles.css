@@ -52,8 +52,8 @@ body {
 }
 
 .social-icons img {
-    width: 2.45rem;
-    height: 2.45rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 .hero-image {
@@ -139,4 +139,69 @@ a:focus {
     font-weight: 600;
     border-bottom: 2px solid black;
     width: fit-content;
+}
+
+#about-me {
+    padding: 3rem 1.25rem;
+    max-width: 700px;
+}
+
+#about-me h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+#about-me p {
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+}
+
+.technologies {
+    padding: 3rem 1.25rem;
+}
+
+.technologies h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.tech-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.tech-grid li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.tech-grid img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.tech-grid p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.tech-grid li {
+    transition: transform 0.2s ease;
+}
+
+.tech-grid li:hover {
+    transform: translateY(-3px);
 }
