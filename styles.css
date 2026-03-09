@@ -1,8 +1,20 @@
+:root {
+    --color-background: #F5F6F7;
+    --color-surface: #FFFFFF;
+    --color-primary: #607B8A;
+    --color-primary-dark: #455763;
+    --color-secondary: #C6D1D9;
+    --color-accent-soft: #EBE2DA;
+    --color-text: #1F1F1F;
+    --color-text-muted: #6B6B6B;
+    --color-border: #D9DEE2;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #ffffff;
-    color: #000000;
+    background: var(--color-background);
+    color: var(--color-text);
 }
 
 .hero-section {
@@ -32,12 +44,14 @@ body {
     margin: 0 0 1rem 0;
     font-size: 1rem;
     line-height: 1.1;
+    color: var(--color-text);
 }
 
 .subtitle {
     margin: 0 0 1.5rem 0;
     font-size: 1rem;
     line-height: 1.4;
+    color: var(--color-text-muted);
 }
 
 .social-icons {
@@ -77,16 +91,21 @@ body {
 }
 
 .hero-buttons button {
-    background: #ffffff;
-    border: 2px solid #000000;
+    background: transparent;
+    color: var(--color-text);
+    border: 2px solid var(--color-primary-dark);
     padding: 1rem;
     font-size: 1rem;
     cursor: pointer;
 }
 
+.hero-buttons button:hover {
+    background: var(--color-secondary);
+}
+
 button:focus,
 a:focus {
-    outline: 3px solid black;
+    outline: 3px solid var(--color-primary-dark);
     outline-offset: 3px;
 }
 
@@ -104,9 +123,10 @@ a:focus {
     flex-direction: column;
     gap: 1rem;
     padding: 1.25rem;
+    border: 1px solid var(--color-border);
     border-radius: 10px;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background: var(--color-surface);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     margin-bottom: 2.5rem;
     transition: tranform 0.2s ease, bow-shadow 0.2s ease;
 }
@@ -126,19 +146,27 @@ a:focus {
 .project-card h3 {
     margin: 0;
     font-size: 1.25rem;
+    color: var(--color-text);
 }
 
 .project-card p {
     margin: 0;
     line-height: 1.5;
+    color: var(--color-text-muted);
 }
 
 .project-link {
     margin-top: 0.5rem;
     text-decoration: none;
+    color: var(--color-primary-dark);
     font-weight: 600;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--color-primary-dark);
     width: fit-content;
+}
+
+.project-link:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
 }
 
 #about-me {
@@ -149,11 +177,13 @@ a:focus {
 #about-me h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    color: var(--color-text);
 }
 
 #about-me p {
     margin: 0 0 1rem 0;
     line-height: 1.6;
+    color: var(--color-text-muted);
 }
 
 .technologies {
@@ -181,7 +211,8 @@ a:focus {
     justify-content: center;
     gap: 0.5rem;
     padding: 1rem;
-    background: white;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     text-align: center;
