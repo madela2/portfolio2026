@@ -35,3 +35,31 @@ function scrollToAboutMe() {
         });
     }
 }
+
+// Menu
+const menuToggle = document.querySelector(".menu-toggle");
+const sideMenu = document.querySelector(".side-menu");
+const overlay = document.querySelector(".overlay");
+const menuLinks = document.querySelectorAll(".side-menu a")
+
+menuToggle.addEventListener("click", () => {
+    sideMenu.classList.toggle("open");
+    overlay.classList.toggle("show");
+
+    const isOpen = sideMenu.classList.contains("open");
+    menuToggle.setAttribute("aria-expanded", isOpen)
+});
+
+overlay.addEventListener("click", () => {
+    sideMenu.classList.remove("open");
+    overlay.classList.remove("show");
+    menuToggle.setAttribute("aria-expanded", "false");
+});
+
+menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        sideMenu.classList.remove("open");
+        overlay.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", false);
+    });
+});
