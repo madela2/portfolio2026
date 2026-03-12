@@ -267,6 +267,16 @@ a:focus {
     margin-bottom: 2rem;
 }
 
+.tech-category {
+    margin-bottom: 2.5rem;
+}
+
+.tech-category h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
 .tech-grid {
     list-style: none;
     padding: 0;
