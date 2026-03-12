@@ -308,3 +308,46 @@ a:focus {
 .tech-grid li:hover {
     transform: translateY(-3px);
 }
+
+.contact-section {
+    padding: 3rem 1.25rem;
+}
+
+.contact-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+.contact-section p {
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    max-width: 700px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-list li {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.contact-list a {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
