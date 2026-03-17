@@ -1,0 +1,26 @@
+[
+    {
+        "id": "dog-tracker",
+        "title": "Pawpartner - Dog Activity Tracker",
+        "imageAlt": "Pawpartner dog activity tracker interface",
+        "imageSrc": "img/pawpartner.png",
+        "description": "A Web of Things project that tracks dog activity using a Micro:Bit, Web Bluetooth, and a web-based application.",
+        "detailPage": "projects/dog-activity-tracker.html"
+    },
+    {
+        "id": "ai-litaracy",
+        "title": "AI Literacy Quiz Platform - Fullstack Project",
+        "imageAlt": "AI literacy quiz platform interface",
+        "imageSrc": "img/ai-literacy.png",
+        "description": "A full-stack MERN application with role-based access, secure authentication, and interactive quizzes designed to help users recognize AI-generated content.",
+        "detailPage": "projects/ai-literacy-platform.html"
+    },
+    {
+        "id": "accessibility",
+        "title": "Accessibility-Focused Website",
+        "imageAlt": "Accessible website interface",
+        "imageSrc": "img/accessibility.png",
+        "description": "A smaller frontend project where I focused on accessibility and usability through semantic HTML, clear navigation, visible focus states, and an accessible contact page.",
+        "detailPage": "projects/accessibility-website.html"
+    }
+]

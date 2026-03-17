@@ -63,3 +63,27 @@ menuLinks.forEach(link => {
         menuToggle.setAttribute("aria-expanded", false);
     });
 });
+
+// Load and render projects
+fetch('projects.json')
+    .then(response => response.json())
+    .then(projects => {
+        const container = document.getElementById('projects-container');
+
+        projects.forEach(project => {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+
+            card.innerHTML = `
+              <img src="${project.imageSrc}" alt="${project.imageAlt}">
+              <h3>${project.title}</h3>
+              <p>${project.description}</p>
+              <a class="project-link" href="${project.detailPage}">
+                Read more
+              </a>
+            `;
+
+            container.appendChild(card);
+        });
+    })
+    .catch(error => console.error('Error loading projects:', error));
