@@ -2,9 +2,13 @@
 let topbutton = document.getElementById("topBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () { scrollFunction() };
+window.onscroll = function () { 
+    scrollFunction() 
+};
 
 function scrollFunction() {
+    if (!topbutton) return;
+
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         topbutton.style.display = "block";
     } else {
@@ -21,18 +25,14 @@ function topFunction() {
 function scrollToProjects() {
     const targetSection = document.getElementById("projects");
     if (targetSection) {
-        targetSection.scrollIntoView({
-            behavior: "smooth"
-        });
+        targetSection.scrollIntoView({behavior: "smooth"});
     }
 }
 
 function scrollToAboutMe() {
     const targetSection = document.getElementById("about-me");
     if (targetSection) {
-        targetSection.scrollIntoView({
-            behavior: "smooth"
-        });
+        targetSection.scrollIntoView({behavior: "smooth"});
     }
 }
 
@@ -42,48 +42,53 @@ const sideMenu = document.querySelector(".side-menu");
 const overlay = document.querySelector(".overlay");
 const menuLinks = document.querySelectorAll(".side-menu a")
 
-menuToggle.addEventListener("click", () => {
-    sideMenu.classList.toggle("open");
-    overlay.classList.toggle("show");
+if (menuToggle && sideMenu && overlay) {
+    menuToggle.addEventListener("click", () => {
+        sideMenu.classList.toggle("open");
+        overlay.classList.toggle("show");
 
-    const isOpen = sideMenu.classList.contains("open");
-    menuToggle.setAttribute("aria-expanded", isOpen)
-});
+        const isOpen = sideMenu.classList.contains("open");
+        menuToggle.setAttribute("aria-expanded", isOpen);
+    });
 
-overlay.addEventListener("click", () => {
-    sideMenu.classList.remove("open");
-    overlay.classList.remove("show");
-    menuToggle.setAttribute("aria-expanded", "false");
-});
-
-menuLinks.forEach(link => {
-    link.addEventListener("click", () => {
+    overlay.addEventListener("click", () => {
         sideMenu.classList.remove("open");
         overlay.classList.remove("show");
         menuToggle.setAttribute("aria-expanded", false);
     });
-});
+
+    menuLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            sideMenu.classList.remove("open");
+            overlay.classList.remove("show");
+            menuToggle.setAttribute("aria-expanded", "false");
+        });
+    });
+}
 
 // Load and render projects
-fetch('projects.json')
-    .then(response => response.json())
-    .then(projects => {
-        const container = document.getElementById('projects-container');
+const projectsContainer = document.getElementById("projects-container");
 
-        projects.forEach(project => {
-            const card = document.createElement('div');
-            card.className = 'project-card';
+if (projectsContainer) {
+    fetch("projects.json")
+        .then(response => response.json())
+        .then(projects => {
+            const container = document.getElementById('projects-container');
 
-            card.innerHTML = `
-              <img src="${project.imageSrc}" alt="${project.imageAlt}">
-              <h3>${project.title}</h3>
-              <p>${project.description}</p>
-              <a class="project-link" href="${project.detailPage}">
-                Read more
-              </a>
-            `;
+            projects.forEach(project => {
+                const link = document.createElement('a');
+                link.className = 'project-card';
+                link.href = project.detailPage;
+                link.setAttribute('aria-label', `View details about ${project.title}`);
 
-            container.appendChild(card);
-        });
-    })
-    .catch(error => console.error('Error loading projects:', error));
+                link.innerHTML = `
+                <img src="${project.imageSrc}" alt="${project.imageAlt}">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                `;
+
+                container.appendChild(link);
+            });
+        })
+        .catch(error => console.error('Error loading projects:', error));    
+}

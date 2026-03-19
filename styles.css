@@ -177,6 +177,8 @@ a:focus {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     margin-bottom: 2.5rem;
     transition: tranform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    color: inherit;
 }
 
 .project-card:hover {
@@ -344,4 +346,85 @@ footer {
     background: var(--color-surface);
     color: var(--color-text-muted);
     font-size: 0.9rem;
+}
+
+/* Project page layout */
+.project-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+}
+
+.project-header {
+    padding: 2rem 1.25rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.project-header h1 {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.project-header p {
+    line-height: 1.6;
+    color: var(--color-text-muted);
+}
+
+.project-meta {
+    margin: 1.5rem 0;
+    padding-left: 1.2rem;
+}
+
+.project-meta li{
+    margin-bottom: 0.5rem;
+}
+
+.project-section {
+    margin-bottom: 2.5rem;
+}
+
+.project-section h2 {
+    margin-bottom: 1rem;
+}
+
+.project-section h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-section p,
+.project-section li {
+    line-height: 1.6;
+}
+
+.project-media {
+    margin: 0;
+}
+
+.project-media video,
+.project-media img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+}
+
+.project-media figcaption {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-top: 0.95rem;
+    line-height: 1.5;
 }
