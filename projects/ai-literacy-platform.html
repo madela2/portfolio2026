@@ -5,139 +5,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Literacy Platform</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <a href="/index.html">Back</a>
-        <h1>AI Literacy Platform (Full-stack MERN Application)</h1>
-        <p>
-            The AI Literacy Platform is a full-stack web application designed to help users
-            recognize AI-generated content through interactive quizzes. The system supports
-            Visitors, Researchers, and Admins with role-based access and secure authentication.
-        </p>
+    <nav class="navbar">
+        <a href="/index.html" class="logo">MLA</a>
+
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="side-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <div class="overlay"></div>
+
+    <aside class="side-menu" id="side-menu">
         <ul>
-            <li>Team project</li>
-            <li>Course: Full-Stack Web Development</li>
-            <li>My role: Full-stack developer (authentication, quiz logic, dashboards)</li>
-            <li>Tech: React, Node.js, Express, MongoDB, JWT</li>
+            <li><a href="/index.html#about-me">About me</a></li>
+            <li><a href="/index.html#projects">Projects</a></li>
+            <li><a href="/index.html#contact">Contact</a></li>
+            <li><a href="https://github.com/madela2" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/madeleine-lyseggen-aas/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
-        <!--Link to GitHub repo-->
-    </header>
-    <main>
-        <h2>Project overview</h2>
-        <p>
-            The AI Literacy Platform is an educational quiz system where users attempt to
-            distinguish between AI-generated and human-created content, including images,
-            audio, and video. The application collects quiz attempts and demographic data
-            while allowing researchers to create and manage quizzes through a dashboard.
-        </p>
-        <p>
-            The platform includes secure authentication, email verification, role-based
-            access control, analytics dashboards, and protected routing on both frontend
-            and backend.
-        </p>
-        <h2>My role and contributions</h2>
-        <p>
-            I contributed to both backend and frontend development, with a
-            strong focus on authentication, session management, and quiz functionality.
-        </p>
-        <ul>
-            <li>Implemented JWT authentication using HttpOnly cookies</li>
-            <li>Refactored token handling from localStorage to secure cookie-based sessions</li>
-            <li>Built email verification with 15-minute expiring token</li>
-            <li>Developed password reset functionality (forgot/reset Password)</li>
-            <li>Implemented inactivity timer with warning and automatic logout</li>
-            <li>Built quiz session management, navigation, and answer validation</li>
-            <li>Implemented demographics submission and dynamic results retrieval</li>
-            <li>Developed protected routes with loading and unauthorized handling</li>
-            <li>Contributed to researcher dashboard and admin analytics features</li>
-        </ul>
-        <h2>How it works</h2>
-        <ol>
-            <li>Users register and verify their email through a time-limited verification link.</li>
-            <li>Authenticated users receive role-based access (visitor, researcher, admin)</li>
-            <li>Researchers create quizzes and upload media files.</li>
-            <li>Visitors complete quizzes and submit demographic information.</li>
-            <li>Quiz attempts are stored in MongoDB and processed for analytics.</li>
-            <li>Dashboards display participation statistics and performance insights.</li>
-        </ol>
-        <h2>Technology stack</h2>
-        <p>Fronted</p>
-        <ul>
-            <li>React</li>
-            <li>Axios</li>
-        </ul>
-        <p>Backend</p>
-        <ul>
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>MongoDB with Mongoose</li>
-        </ul>
-        <p>Authentication and security</p>
-        <ul>
-            <li>JWT (access + refresh tokens)</li>
-            <li>HttpOnly cookies</li>
-            <li>Role-based access control</li>
-        </ul>
-        <p>Documentation</p>
-        <ul>
-            <li>Swagger API documentation</li>
-            <li>Storybook for React components</li>
-        </ul>
-        <h2>Key features</h2>
-        <ul>
-            <li>Interactive AI-detection quizzes</li>
-            <li>Email verification with expiring token</li>
-            <li>Secure authentication using HttpOnly cookies</li>
-            <li>Role-based dashboards (visitor, researcher, admin)</li>
-            <li>Quiz analytics and demographic insights</li>
-            <li>Password reset and banned-user handling</li>
-            <li>Inactivity timer with automatic logout</li>
-        </ul>
-        <h2>Challenges and solutions</h2>
-        <ul>
-            <li>Authentication refactor</li>
-            <ul>
-                <li>
-                    Refactoring from localStorage to HttpOnly cookies required adjusting
-                    token handling, CORS configuration, protected routes, and session validation.
-                </li>
+    </aside>
+    <main class="project-page">
+        <header class="project-header">
+            <a href="/index.html#projects" class="back-link">Back to projects</a>
+            <h1>AI Literacy Platform (Full-stack MERN Application)</h1>
+            <p>
+                The AI Literacy Platform is a full-stack web application designed to help users
+                recognize AI-generated content through interactive quizzes. The system supports
+                Visitors, Researchers, and Admins with role-based access and secure authentication.
+            </p>
+            <ul class="project-meta">
+                <li><strong>Team:</strong> Two web development students</li>
+                <li><strong>Course</strong> Full-Stack Web Development</li>
+                <li><strong>My role:</strong> Full-stack developer (authentication, quiz logic, dashboards)</li>
+                <li><strong>Tech:</strong> React, Node.js, Express, MongoDB, JWT</li>
             </ul>
-            <li>Media handling and file uploads</li>
+            <a href="https://github.com/madela2/accessible-website.git" class="project-link">View GitHub repository</a>
+        </header>
+
+        <section class="project-section">
+            <h2>Project overview</h2>
+            <p>
+                The AI Literacy Platform is an educational quiz system where users attempt to
+                distinguish between AI-generated and human-created content, including images,
+                audio, and video. The application collects quiz attempts and demographic data
+                while allowing researchers to create and manage quizzes through a dashboard.
+            </p>
+            <p>
+                The platform includes secure authentication, email verification, role-based
+                access control, analytics dashboards, and protected routing on both frontend
+                and backend.
+            </p>
+        </section>
+
+        <section class="project-section">
+            <h2>My role and contributions</h2>
+            <p>
+                I contributed to both backend and frontend development, with a
+                strong focus on authentication, session management, and quiz functionality.
+            </p>
             <ul>
-                <li>
-                    We encountered issues with video files not appearing during quizzes due to
-                    incorrect media paths in the seeding script. Debugging required inspecting
-                    backend routes, database entries, and static file configuration.
-                </li>
+                <li>Implemented JWT authentication using HttpOnly cookies</li>
+                <li>Refactored token handling from localStorage to secure cookie-based sessions</li>
+                <li>Built email verification with 15-minute expiring token</li>
+                <li>Developed password reset functionality (forgot/reset Password)</li>
+                <li>Implemented inactivity timer with warning and automatic logout</li>
+                <li>Built quiz session management, navigation, and answer validation</li>
+                <li>Implemented demographics submission and dynamic results retrieval</li>
+                <li>Developed protected routes with loading and unauthorized handling</li>
+                <li>Contributed to researcher dashboard and admin analytics features</li>
             </ul>
-            <li>Quiz creation and publish logic</li>
+        </section>
+
+        <section class="project-section" aria-labelledby="screens-heading">
+            <h2 id="screens-heading">Selected screens</h2>
+            <p>
+                These screens show the website
+            </p>
+
+            <div class="image-gallery">
+                <button type="button" class="gallery-item" data-image="/img/ai-literacy-q2.png" data-alt="Question"
+                    data-caption="Question">
+                    <img src="/img/ai-literacy-q2.png" alt="Question">
+                </button>
+
+                <button type="button" class="gallery-item" data-image="/img/ai-literacy-q2a.png"
+                    data-alt="Question after answering" data-caption="Question after answering">
+                    <img src="/img/ai-literacy-q2a.png" alt="Question after answering">
+                </button>
+
+                <button type="button" class="gallery-item" data-image="/img/ai-literacy-r-dashboard.png"
+                    data-alt="Researcher dashboard" data-caption="Researcher dashboard">
+                    <img src="/img/ai-literacy-r-dashboard.png" alt="Researcher dashboard">
+                </button>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>How it works</h2>
+            <ol>
+                <li>Users register and verify their email through a time-limited verification link.</li>
+                <li>Authenticated users receive role-based access (visitor, researcher, admin)</li>
+                <li>Researchers create quizzes and upload media files.</li>
+                <li>Visitors complete quizzes and submit demographic information.</li>
+                <li>Quiz attempts are stored in MongoDB and processed for analytics.</li>
+                <li>Dashboards display participation statistics and performance insights.</li>
+            </ol>
+        </section>
+
+        <section class="project-section">
+            <h2>Technology stack</h2>
+            <p>Fronted</p>
             <ul>
-                <li>
-                    Draft updates and publish functionality required careful synchronization
-                    between frontend state management and backend PATCH routes.
-                </li>
+                <li>React</li>
+                <li>Axios</li>
             </ul>
-            <li>Session and inactivity handling</li>
+            <p>Backend</p>
             <ul>
-                <li>
-                    Implementing inactivity timers while maintaining correct session persistence
-                    required restructuring AuthProvider logic and route protection.
-                </li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB with Mongoose</li>
             </ul>
-        </ul>
-        <h2>What I learned</h2>
-        <ul>
-            <li>Implementing secure authentication patterns in modern web applications</li>
-            <li>Designing role-based access control systems</li>
-            <li>Debugging full-stack media and API integration issues</li>
-            <li>Managing session lifecycle and token refresh flows</li>
-        </ul>
+            <p>Authentication and security</p>
+            <ul>
+                <li>JWT (access + refresh tokens)</li>
+                <li>HttpOnly cookies</li>
+                <li>Role-based access control</li>
+            </ul>
+            <p>Documentation</p>
+            <ul>
+                <li>Swagger API documentation</li>
+                <li>Storybook for React components</li>
+            </ul>
+        </section>
+
+        <section class="project-section">
+            <h2>Key features</h2>
+            <ul>
+                <li>Interactive AI-detection quizzes</li>
+                <li>Email verification with expiring token</li>
+                <li>Secure authentication using HttpOnly cookies</li>
+                <li>Role-based dashboards (visitor, researcher, admin)</li>
+                <li>Quiz analytics and demographic insights</li>
+                <li>Password reset and banned-user handling</li>
+                <li>Inactivity timer with automatic logout</li>
+            </ul>
+        </section>
+
+        <section class="project-section">
+            <h2>Challenges and solutions</h2>
+            <ul>
+                <li>Authentication refactor</li>
+                <ul>
+                    <li>
+                        Refactoring from localStorage to HttpOnly cookies required adjusting
+                        token handling, CORS configuration, protected routes, and session validation.
+                    </li>
+                </ul>
+                <li>Media handling and file uploads</li>
+                <ul>
+                    <li>
+                        We encountered issues with video files not appearing during quizzes due to
+                        incorrect media paths in the seeding script. Debugging required inspecting
+                        backend routes, database entries, and static file configuration.
+                    </li>
+                </ul>
+                <li>Quiz creation and publish logic</li>
+                <ul>
+                    <li>
+                        Draft updates and publish functionality required careful synchronization
+                        between frontend state management and backend PATCH routes.
+                    </li>
+                </ul>
+                <li>Session and inactivity handling</li>
+                <ul>
+                    <li>
+                        Implementing inactivity timers while maintaining correct session persistence
+                        required restructuring AuthProvider logic and route protection.
+                    </li>
+                </ul>
+            </ul>
+        </section>
+
+        <section class="project-section">
+            <h2>What I learned</h2>
+            <ul>
+                <li>Implementing secure authentication patterns in modern web applications</li>
+                <li>Designing role-based access control systems</li>
+                <li>Debugging full-stack media and API integration issues</li>
+                <li>Managing session lifecycle and token refresh flows</li>
+            </ul>
+        </section>
     </main>
     <footer>
-
+        <p>&copy; 2026 Madeleine Lyseggen Aas</p>
     </footer>
+    <div class="lightbox" id="lightbox" hidden>
+        <div class="lightbox-backdrop" data-close-lightbox="true"></div>
+
+        <div class="lightbox-content" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" tabindex="-1">
+
+            <button type="button" class="lightbox-close" aria-label="Close image viewer">
+                x
+            </button>
+
+            <button type="button" class="lightbox-nav lightbox-prev" aria-label="Show previous image">
+                ‹
+            </button>
+
+            <figure class="lightbox-figure">
+                <img id="lightbox-image" src="" alt="">
+                <figcaption id="lightbox-caption"></figcaption>
+            </figure>
+
+            <button type="button" class="lightbox-nav lightbox-next" aria-label="Show next image">
+                ›
+            </button>
+        </div>
+    </div>
 </body>
 
 </html>

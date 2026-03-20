@@ -92,3 +92,106 @@ if (projectsContainer) {
         })
         .catch(error => console.error('Error loading projects:', error));    
 }
+
+const galleryItems = document.querySelectorAll(".gallery-item");
+const lightbox = document.getElementById("lightbox");
+const lightboxContent = document.querySelector(".lightbox-content");
+const lightboxImage = document.getElementById("lightbox-image");
+const lightboxCaption = document.getElementById("lightbox-caption");
+const lightboxClose = document.querySelector(".lightbox-close");
+const lightboxPrev = document.querySelector(".lightbox-prev");
+const lightboxNext = document.querySelector(".lightbox-next");
+
+let currentImageIndex = 0;
+let lastFocusedElement = null;
+
+const galleryData = Array.from(galleryItems).map((item) => ({
+    src: item.dataset.image,
+    alt: item.dataset.alt,
+    caption: item.dataset.caption
+}));
+
+function updateLightbox(index) {
+    const item = galleryData[index];
+    if (!item) return;
+
+    lightboxImage.src = item.src;
+    lightboxImage.alt = item.alt;
+    lightboxCaption.textContent = item.caption;
+    currentImageIndex = index;
+}
+
+function openLightbox(index) {
+    if (!lightbox || !lightboxContent) return;
+
+    lastFocusedElement = document.activeElement;
+    updateLightbox(index);
+
+    lightbox.hidden = false;
+    document.body.classList.add("lightbox-open");
+    lightboxContent.focus();
+}
+
+function closeLightbox() {
+    if (!lightbox) return;
+
+    lightbox.hidden = true;
+    document.body.classList.remove("lightbox-open");
+    lightboxImage.src = "";
+    lightboxImage.alt = "";
+    lightboxCaption.textContent = "";
+
+    if (lastFocusedElement) {
+        lastFocusedElement.focus();
+    }
+}
+
+function showNextImage() {
+    const nextIndex = (currentImageIndex + 1) % galleryData.length;
+    updateLightbox(nextIndex);
+}
+
+function showPreviousImage() {
+    const prevIndex = (currentImageIndex - 1 + galleryData.length) % galleryData.length;
+    updateLightbox(prevIndex);
+}
+
+galleryItems.forEach((item, index) => {
+    item.addEventListener("click", () => openLightbox(index));
+});
+
+if (lightboxClose) {
+    lightboxClose.addEventListener("click", closeLightbox);
+}
+
+if (lightboxNext) {
+    lightboxNext.addEventListener("click", showNextImage);
+}
+
+if (lightboxPrev) {
+    lightboxPrev.addEventListener("click", showPreviousImage);
+}
+
+if (lightbox) {
+    lightbox.addEventListener("click", (event) => {
+        if (event.target.matches("[data-close-lightbox='true']")) {
+            closeLightbox();
+        }
+    });
+}
+
+document.addEventListener("keydown", (event) => {
+    if (!lightbox || lightbox.hidden) return;
+
+    if (event.key === "Escape") {
+        closeLightbox();
+    }
+
+    if (event.key === "ArrowRight") {
+        showNextImage();
+    }
+
+    if (event.key === "ArrowLeft") {
+        showPreviousImage();
+    }
+})
