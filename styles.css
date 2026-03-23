@@ -571,6 +571,62 @@ body.lightbox-open {
     overflow: hidden;
 }
 
+.about-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+}
+
+.about-header {
+    margin-bottom: 2.5rem;
+}
+
+.about-header h1 {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.about-lead {
+    max-width: 700px;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.about-section {
+    margin-bottom: 2rem;
+}
+
+.about-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+}
+
+.about-card h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    color: var(--color-text);
+}
+
+.about-card p {
+    margin: 0 0 1rem 0;
+    line-height: 1.65;
+    color: var(--color-text-muted);
+}
+
+.about-card p:last-child {
+    margin-bottom: 0;
+}
+
+.about-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
 @media (min-width: 700px) {
     .image-gallery {
         grid-template-columns: repeat(3, 1fr);
