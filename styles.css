@@ -151,11 +151,11 @@ nav,
     margin: 0 auto;
 }
 
-/* button:focus,
-a:focus {
+button:focus-visible,
+a:focus-visible {
     outline: 3px solid var(--color-primary-dark);
     outline-offset: 3px;
-} */
+} 
 
 #projects {
     padding: 3rem 1.25rem;
@@ -176,7 +176,7 @@ a:focus {
     background: var(--color-surface);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     margin-bottom: 2.5rem;
-    transition: tranform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     text-decoration: none;
     color: inherit;
 }
@@ -400,7 +400,7 @@ footer {
 
 .project-section h2 {
     margin-bottom: 0.9rem;
-    font-size: 1.5;
+    font-size: 1.5rem;
 }
 
 .project-section h3 {
@@ -451,7 +451,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin-top: 1.25.rem;
+    margin-top: 1.25rem;
 }
 
 .gallery-item {
