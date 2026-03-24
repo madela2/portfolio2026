@@ -12,7 +12,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     background: var(--color-background);
     color: var(--color-text);
 }
@@ -143,6 +143,30 @@ nav,
     height: 225px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.hero-doodle {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.hero-doodle-plane {
+    top: 12rem;
+    right: 14rem;
+    width: 100px;
+}
+
+.hero-doodle-star {
+    top: 13rem;
+    right: 4rem;
+    width: 30px;
+}
+
+.hero-doodle img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .hero p {
