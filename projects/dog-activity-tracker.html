@@ -36,6 +36,14 @@
     <main class="project-page">
         <header class="project-header">
             <a href="/index.html#projects" class="back-link">Back to projects</a>
+            <section class="project-section">
+                <figure class="project-media">
+                    <video controls preload="metadata">
+                        <source src="/img/pawpartner.mp4" type="video/mp4">
+                        Your browser does not support the video tag
+                    </video>
+                </figure>
+            </section>
             <h1>Pawpartner - Dog Activity Tracker</h1>
             <p>
                 Pawpartner is a Web of Things prototype designed to improve dogs' wellbeing and
@@ -54,19 +62,6 @@
             <a href="https://github.com/emilirol/WoT-Dogtracker.git" class="project-link" target="_blank">View GitHub
                 repository</a>
         </header>
-
-        <section class="project-section">
-            <h2>Demo</h2>
-            <figure class="project-media">
-                <video controls preload="metadata">
-                    <source src="/img/pawpartner.mp4" type="video/mp4">
-                    Your browser does not support the video tag
-                </video>
-                <figcaption>
-                    Demo video created by my teammates to showcase the full user experience of the activity tracker.
-                </figcaption>
-            </figure>
-        </section>
 
         <section class="project-section">
             <h2>Project overview</h2>
@@ -94,30 +89,27 @@
             </ul>
         </section>
 
-        <section class="project-section" aria-labelledby="screens-heading">
-            <h2 id="screens-heading">Selected screens</h2>
-            <p>
-                These screens show parts of the interface I worked on, including the monthly overview,
-                relationsip status, and profile page.
-            </p>
-
-            <div class="image-gallery">
-                <button type="button" class="gallery-item" data-image="/img/pawpartner-month.png"
-                    data-alt="Monthly activity overview with streak tracking in the Pawpartner app"
-                    data-caption="Monthly activity overview showing daily progress and streak tracking.">
-                    <img src="/img/pawpartner-month.png"
-                        alt="Monthly activity overview with streak tracking in the Pawpartner app">
+        <section class="project-section">
+            <div class="featured-gallery">
+                <button type="button" class="featured-image" id="featured-image" data-image="/img/pawpartner-month.png"
+                data-alt="Monthly activity overview with streak tracking in the Pawpartner webapplication"
+                data-caption="Monthly activity overview showing daily progress and streak tracking.">
+                <img src="/img/pawpartner-month.png" 
+                    alt="Monthly activity overview with streak tracking in the Pawpartner webapplication">
                 </button>
 
-                <button type="button" class="gallery-item" data-image="/img/pawpartner-profile.png" data-alt="Profile"
-                    data-caption="Profile">
-                    <img src="/img/pawpartner-profile.png" alt="Profile">
-                </button>
+                <div class="thumbnail-gallery">
+                    <button type="button" class="thumbnail-item" data-image="/img/pawpartner-profile.png"
+                        data-alt="Profile"
+                        data-caption="Profile">
+                        <img src="/img/pawpartner-profile.png" alt="Profile">
+                    </button>
 
-                <button type="button" class="gallery-item" data-image="/img/pawpartner-landing.png"
-                    data-alt="Landing page" data-caption="Landing page">
-                    <img src="/img/pawpartner-landing.png" alt="Landing page">
-                </button>
+                    <button type="button" class="thumbnail-item" data-image="/img/pawpartner-landing.png"
+                        data-alt="Landing page" data-caption="Landing page">
+                        <img src="/img/pawpartner-landing.png" alt="Landing page">
+                    </button>
+                </div>
             </div>
         </section>
 

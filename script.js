@@ -10,7 +10,7 @@ function scrollFunction() {
     if (!topbutton) return;
 
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        topbutton.style.display = "block";
+        topbutton.style.display = "flex";
     } else {
         topbutton.style.display = "none";
     }
@@ -93,7 +93,70 @@ if (projectsContainer) {
         .catch(error => console.error('Error loading projects:', error));    
 }
 
-const galleryItems = document.querySelectorAll(".gallery-item");
+const featuredImage = document.getElementById("featured-image");
+const thumbnailItems = document.querySelectorAll(".thumbnail-item");
+
+let allGalleryImages = [
+    {
+        src: "/img/pawpartner-month.png",
+        alt: "Monthly activity overview with streak tracking in the Pawpartner webapplication",
+        caption: "Monthly activity overview showing daily progress and streak tracking."
+    },
+    {
+        src: "/img/pawpartner-profile.png",
+        alt: "Profile page",
+        caption: "Profile page"
+    },
+    {
+        src: "/img/pawpartner-landing.png",
+        alt: "Landing page",
+        caption: "Landing page"
+    }
+];
+
+if (featuredImage) {
+    featuredImage.addEventListener("click", () => {
+        const currentSrc = featuredImage.dataset.image;
+        const currentIndex = allGalleryImages.findIndex(img => img.src === currentSrc);
+        openLightboxFeatured(currentIndex);
+    });
+}
+
+thumbnailItems.forEach((thumbnail) => {
+    thumbnail.addEventListener("click", () => {
+        const thumbSrc = thumbnail.dataset.image;
+        const thumbAlt = thumbnail.dataset.alt;
+        const thumbCaption = thumbnail.dataset.caption;
+
+        const currentFeaturedSrc = featuredImage.dataset.image;
+        const currentFeaturedAlt = featuredImage.dataset.alt;
+        const currentFeaturedCaption = featuredImage.dataset.caption;
+
+        featuredImage.dataset.image = thumbSrc;
+        featuredImage.dataset.alt = thumbAlt;
+        featuredImage.dataset.caption = thumbCaption;
+        featuredImage.querySelector("img").src = thumbSrc;
+        featuredImage.querySelector("img").alt = thumbAlt;
+
+        thumbnail.dataset.image = currentFeaturedSrc;
+        thumbnail.dataset.alt = currentFeaturedAlt;
+        thumbnail.dataset.caption = currentFeaturedCaption;
+        thumbnail.querySelector("img").src = currentFeaturedSrc;
+        thumbnail.querySelector("img").alt = currentFeaturedAlt;
+    });
+})
+
+function openLightboxFeatured(index) {
+    if (!lightbox || !lightboxContent) return;
+
+    lastFocusedElement = document.activeElement;
+    updateLightbox(index);
+
+    lightbox.hidden = false;
+    document.body.classList.add("lightbox-open");
+    lightboxContent.focus();
+}
+
 const lightbox = document.getElementById("lightbox");
 const lightboxContent = document.querySelector(".lightbox-content");
 const lightboxImage = document.getElementById("lightbox-image");
@@ -105,11 +168,7 @@ const lightboxNext = document.querySelector(".lightbox-next");
 let currentImageIndex = 0;
 let lastFocusedElement = null;
 
-const galleryData = Array.from(galleryItems).map((item) => ({
-    src: item.dataset.image,
-    alt: item.dataset.alt,
-    caption: item.dataset.caption
-}));
+const galleryData = allGalleryImages;
 
 function updateLightbox(index) {
     const item = galleryData[index];
@@ -119,17 +178,6 @@ function updateLightbox(index) {
     lightboxImage.alt = item.alt;
     lightboxCaption.textContent = item.caption;
     currentImageIndex = index;
-}
-
-function openLightbox(index) {
-    if (!lightbox || !lightboxContent) return;
-
-    lastFocusedElement = document.activeElement;
-    updateLightbox(index);
-
-    lightbox.hidden = false;
-    document.body.classList.add("lightbox-open");
-    lightboxContent.focus();
 }
 
 function closeLightbox() {
@@ -155,10 +203,6 @@ function showPreviousImage() {
     const prevIndex = (currentImageIndex - 1 + galleryData.length) % galleryData.length;
     updateLightbox(prevIndex);
 }
-
-galleryItems.forEach((item, index) => {
-    item.addEventListener("click", () => openLightbox(index));
-});
 
 if (lightboxClose) {
     lightboxClose.addEventListener("click", closeLightbox);

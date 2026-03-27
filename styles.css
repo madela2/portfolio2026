@@ -163,6 +163,13 @@ nav,
     width: 30px;
 }
 
+/*  .hero-landscape {
+    top: 68.3%;
+    right: 3%;
+    z-index: -1;
+    opacity: 0.2;
+}  */
+
 .hero-doodle img {
     width: 100%;
     height: auto;
@@ -180,6 +187,20 @@ a:focus-visible {
     outline: 3px solid var(--color-primary-dark);
     outline-offset: 3px;
 } 
+
+.page-doodle {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.6;
+    width: 100%;
+    z-index: -1;
+}
+
+.page-doodle img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 #projects {
     padding: 3rem 1.25rem;
@@ -241,23 +262,6 @@ a:focus-visible {
 .project-link:hover {
     color: var(--color-primary);
     border-bottom-color: var(--color-primary);
-}
-
-#about-me {
-    padding: 3rem 1.25rem;
-    max-width: 700px;
-}
-
-#about-me h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: var(--color-text);
-}
-
-#about-me p {
-    margin: 0 0 1rem 0;
-    line-height: 1.6;
-    color: var(--color-text-muted);
 }
 
 .technologies {
@@ -362,6 +366,28 @@ a:focus-visible {
 
 .contact-list a:hover {
     text-decoration: underline;
+}
+
+#topBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--color-text);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.topBtn-arrow {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
 }
 
 footer {
@@ -595,10 +621,96 @@ body.lightbox-open {
     overflow: hidden;
 }
 
+.featured-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.featured-image {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background: none;
+}
+
+.featured-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+}
+
+.featured-image:hover img {
+    transform: scale(1.01);
+    transition: transform 0.2s ease;
+}
+
+.thumbnail-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.thumbnail-item {
+    display: block;
+    width: 30%;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: none;
+}
+
+.thumbnail-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.thumbnail-item:hover img {
+    opacity: 1;
+}
+
+.thumbnail-item:focus-visible {
+    outline: 3px solid var(--color-primary-dark);
+    outline-offset: 3px;
+}
+
 .about-page {
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem 1.25rem 4rem;
+}
+
+.about-header button {
+    display: flex;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.about-header button img {
+    width: 18px;
+    height: 18px;
+}
+
+.about-header button a {
+    margin-top: 0.1rem;
 }
 
 .about-header {
