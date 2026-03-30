@@ -96,28 +96,33 @@ if (projectsContainer) {
 const featuredImage = document.getElementById("featured-image");
 const thumbnailItems = document.querySelectorAll(".thumbnail-item");
 
-let allGalleryImages = [
-    {
-        src: "/img/pawpartner-month.png",
-        alt: "Monthly activity overview with streak tracking in the Pawpartner webapplication",
-        caption: "Monthly activity overview showing daily progress and streak tracking."
-    },
-    {
-        src: "/img/pawpartner-profile.png",
-        alt: "Profile page",
-        caption: "Profile page"
-    },
-    {
-        src: "/img/pawpartner-landing.png",
-        alt: "Landing page",
-        caption: "Landing page"
+function buildGalleryData() {
+    const gallery = [];
+
+    if (featuredImage) {
+        gallery.push({
+            src: featuredImage.getAttribute('data-image'),
+            alt: featuredImage.getAttribute('data-alt'),
+            caption: featuredImage.getAttribute('data-caption')
+        });
     }
-];
+
+    thumbnailItems.forEach(thumbnail => {
+        gallery.push({
+            src: thumbnail.getAttribute('data-image'),
+            alt: thumbnail.getAttribute('data-alt'),
+            caption: thumbnail.getAttribute('data-caption')
+        });
+    });
+
+    return gallery;
+}
 
 if (featuredImage) {
     featuredImage.addEventListener("click", () => {
         const currentSrc = featuredImage.dataset.image;
-        const currentIndex = allGalleryImages.findIndex(img => img.src === currentSrc);
+        let galleryData = buildGalleryData();
+        const currentIndex = galleryData.findIndex(img => img.src === currentSrc);
         openLightboxFeatured(currentIndex);
     });
 }
@@ -143,6 +148,8 @@ thumbnailItems.forEach((thumbnail) => {
         thumbnail.dataset.caption = currentFeaturedCaption;
         thumbnail.querySelector("img").src = currentFeaturedSrc;
         thumbnail.querySelector("img").alt = currentFeaturedAlt;
+
+        galleryData = buildGalleryData();
     });
 })
 
@@ -168,7 +175,7 @@ const lightboxNext = document.querySelector(".lightbox-next");
 let currentImageIndex = 0;
 let lastFocusedElement = null;
 
-const galleryData = allGalleryImages;
+let galleryData = buildGalleryData();
 
 function updateLightbox(index) {
     const item = galleryData[index];

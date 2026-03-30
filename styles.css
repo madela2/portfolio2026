@@ -631,7 +631,7 @@ body.lightbox-open {
 .featured-image {
     display: block;
     margin: 0 auto;
-    width: 50%;
+    width: 65%;
     padding: 0;
     border: none;
     border-radius: 10px;
@@ -661,7 +661,7 @@ body.lightbox-open {
 
 .thumbnail-item {
     display: block;
-    width: 30%;
+    width: 20%;
     padding: 0;
     border: none;
     border-radius: 10px;
