@@ -146,40 +146,6 @@
         </section>
 
         <section class="project-section">
-            <h2>Key features</h2>
-            <ul>
-                <li>Wearable activity tracker for dogs</li>
-                <li>Adjustable sensitivity based on dog weight</li>
-                <li>Monthly activity overview</li>
-                <li>Activity history stored in a database</li>
-                <li>Personalized activity suggestions based on remaining daily activity needs</li>
-                <li>Relationship status calculated from daily activity</li>
-            </ul>
-        </section>
-
-        <section class="project-section">
-            <h2>Challenges and solutions</h2>
-
-            <h3>Bluetooth connectivity</h3>
-            <p>
-                Bluetooth connections are unstable and limited in range. To handle disconnections the Micro:Bit stores
-                activity data locally when disconnected and sync it once the
-                connection is restored.
-            </p>
-
-            <h3>Measuring activity accurately</h3>
-            <p>
-                We implemented movement and activity threshold that adapt based on the dog's weight.
-            </p>
-
-            <h3>Data flow</h3>
-            <p>
-                Data is exchanged using UART over Web Bluetooth, parsed in the browser, and forwarded
-                to the backend via REST APIs.
-            </p>
-        </section>
-
-        <section class="project-section">
             <h2>What I learned</h2>
             <ul>
                 <li>Working with real-world sensor data</li>

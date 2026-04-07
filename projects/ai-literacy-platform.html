@@ -145,54 +145,6 @@
         </section>
 
         <section class="project-section">
-            <h2>Key features</h2>
-            <ul>
-                <li>Interactive AI-detection quizzes</li>
-                <li>Email verification with expiring token</li>
-                <li>Secure authentication using HttpOnly cookies</li>
-                <li>Role-based dashboards (visitor, researcher, admin)</li>
-                <li>Quiz analytics and demographic insights</li>
-                <li>Password reset and banned-user handling</li>
-                <li>Inactivity timer with automatic logout</li>
-            </ul>
-        </section>
-
-        <section class="project-section">
-            <h2>Challenges and solutions</h2>
-            <ul>
-                <li>Authentication refactor</li>
-                <ul>
-                    <li>
-                        Refactoring from localStorage to HttpOnly cookies required adjusting
-                        token handling, CORS configuration, protected routes, and session validation.
-                    </li>
-                </ul>
-                <li>Media handling and file uploads</li>
-                <ul>
-                    <li>
-                        We encountered issues with video files not appearing during quizzes due to
-                        incorrect media paths in the seeding script. Debugging required inspecting
-                        backend routes, database entries, and static file configuration.
-                    </li>
-                </ul>
-                <li>Quiz creation and publish logic</li>
-                <ul>
-                    <li>
-                        Draft updates and publish functionality required careful synchronization
-                        between frontend state management and backend PATCH routes.
-                    </li>
-                </ul>
-                <li>Session and inactivity handling</li>
-                <ul>
-                    <li>
-                        Implementing inactivity timers while maintaining correct session persistence
-                        required restructuring AuthProvider logic and route protection.
-                    </li>
-                </ul>
-            </ul>
-        </section>
-
-        <section class="project-section">
             <h2>What I learned</h2>
             <ul>
                 <li>Implementing secure authentication patterns in modern web applications</li>
