@@ -771,7 +771,7 @@ body.lightbox-open {
     .intro-section {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
+        align-items: stretch;
         gap: 1.5rem;
     }
 
@@ -782,8 +782,10 @@ body.lightbox-open {
 
     .intro-image {
         width: 150px;
+        height: 100%;
         flex-shrink: 0;
         order: 2;
+        object-fit: cover;
     }
 }
 
