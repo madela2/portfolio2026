@@ -52,6 +52,11 @@ nav,
     color: var(--color-primary);
 }
 
+.nav-links a.active {
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 0.5rem;
+}
+
 .logo {
     text-decoration: none;
     color: inherit;
@@ -674,10 +679,15 @@ body.lightbox-open {
     margin-bottom: 0;
 }
 
+.about-card li {
+    color: var(--color-text-muted);
+}
+
 .intro-section {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    align-items: center;
 }
 
 .intro-card {
@@ -767,11 +777,13 @@ body.lightbox-open {
 
     .intro-card {
         flex: 1;
+        order: 1;
     }
 
     .intro-image {
         width: 150px;
         flex-shrink: 0;
+        order: 2;
     }
 }
 
