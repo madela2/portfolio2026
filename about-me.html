@@ -12,34 +12,16 @@
 
 <body>
     <nav class="navbar">
-        <a href="/index.html" class="logo">MLA</a>
-
-        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="side-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <a href="index.html" class="logo">MLA</a>
+        <ul class="nav-links">
+            <li><a href="about-me.html">About me</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+        </ul>
     </nav>
 
-    <div class="overlay"></div>
-
-    <aside class="side-menu" id="side-menu">
-        <ul>
-            <li><a href="about-me.html">About me</a></li>
-            <li><a href="/index.html#projects">Projects</a></li>
-            <li><a href="/index.html#contact">Contact</a></li>
-            <li><a href="https://github.com/madela2" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/madeleine-lyseggen-aas/" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a></li>
-        </ul>
-    </aside>
     <main class="about-page">
         <header class="about-header">
-            <button>
-                <img src="/img/arrow-left.svg" alt="">
-                <a href="index.html" class="back-link">Back to home</a>    
-            </button>
-            
+            <a href="index.html" class="back-link">Back to home</a>
             <h1>About me</h1>
             <p class="about-lead">
                 I'm Madeleine Lyseggen Aas, a web development student at NTNU with an interest in creating
@@ -48,82 +30,74 @@
         </header>
 
         <section class="about-section">
-            <div class="about-card">
-                <h2>Who I am</h2>
-                <p>
-                    I'm currently studying web development and building my skills through both
-                    individual and team-based projects. I enjoy working with frontend development,
-                    but I also like understanding how the different parts of a web application work together.
-                </p>
-                <p>
-                    Through my studies, I've worked with HTML, CSS, JavaScript, PHP, Python,
-                    databases, APIs, and full-stack project work. I like turning ideas into
-                    interfaces that feel clear, structured, and intuitive to use.
-                </p>
-            </div>
-        </section>
-        
-        <section class="about-section">
-            <div class="about-card">
-                <h2>What I care about</h2>
-                <p>
-                    Accessibility and usability are especially important to me. I want the things 
-                    I build to work well for different kinds of users, including people who rely
-                    on keyboard navigation, screen readers, or other assistive technologies.
-                </p>
-                <p>
-                    I also care about creating solutions that feel calm, understandable, and
-                    well-organised. For me, good design is not just about how something looks,
-                    but also about how it works and how it makes people feel when they use it.
-                </p>
-            </div>
-        </section>
-
-        <section class="about-section about-grid">
-            <div class="about-card">
-                <h2>How I work</h2>
-                <p>
-                    I like to work in a structured and reflective way. I often spend time thinking
-                    through both the user experience and the implementation, and I care about making
-                    decisions that feel intentional.
-                </p>
-                <p>
-                    In team projects, I value collaboration, clear communication, and being honest 
-                    about what I contributed. I also enjoy learnign from others and improving as I go.
-                </p>
-            </div>
-
-            <div class="about-card">
-                <h2>What I'm building towards</h2>
-                <p>
-                    Right now, I'm continuing to strengthen my frontend and full-stack skills while 
-                    building a portfolio that reflects both what I've learned and how I like to work.
-                </p>
-                <p>
-                    My goal is to grom into a developer who creates accessible and meaningful digital 
-                    experiences with both technical care and user needs in mind.
-                </p>
+            <div class="intro-section">
+                <div class="about-card intro-card">
+                    <h2>Hi, nice to see you!</h2>
+                    <p>
+                        Here you can get to know me a bit more as a person, not just as a developer.
+                    </p>
+                    <p>
+                        I see myself as a kind and caring person. I care a lot about the people around me, and I'm very
+                        protective of those close to me. I'm also in my twenties, which means that I am in the phase of
+                        my
+                        life where I'm figuring out who I am and where I want to go, and I think that's both exciting
+                        and
+                        a little bit scary.
+                    </p>
+                </div>
+                <img src="/img/portrait-nobg.png" alt="Illustration of Madeleine" class="intro-image">
             </div>
         </section>
 
         <section class="about-section">
             <div class="about-card">
-                <h2>A little more about me</h2>
+                <h2>What I enjoy</h2>
                 <p>
-                    I enjoy learning by building real projects and seeing how ideas develop from 
-                    early concepts to working solutions. I'm especially motivated by projects where 
-                    I can combine code, design thinking, and practical problem-solving.
+                    I really enjoy spending time with my friends and family. It might sound like something everyone
+                    says,
+                    but I truly value the time I get with the people I care about.
                 </p>
                 <p>
-                    This portfolio is a way for me to show both what I've worked on and the kind
-                    of developer I'm becoming.
+                    I also enjoy things that make me think and learn, like Lego, jigsaw puzzles, brain teasers, quizzes
+                    and anything crime-related (TV-series, books, true crime, podcasts, you name it). And speaking of
+                    books,
+                    I also love reading, especially thrillers, crime novels, and anything with a good plot twist.
+                    My comfort show is Castle, which is a crime series with a lot of humor and heart, and I can watch it
+                    over and over again.
                 </p>
+
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="about-card">
+                <h2>A few extra things about me</h2>
+                <ul>
+                    <li>I love putting together and personalizing gifts</li>
+                    <li>I'm more of a "jeans and t-shirt" kind of person than dresses</li>
+                    <li>I enjoy trying out new things and stepping out of my comfort zone</li>
+                    <li>I have a soft spot for animals, especially dogs</li>
+                </ul>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Madeleine Lyseggen Aas</p>
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li>
+                    <a href="mailto:madeleinelyseggen@icloud.com">Email</a>
+                </li>
+                <li>
+                    <a href="https://github.com/madela2" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/madeleine-lyseggen-aas/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a>
+                </li>
+            </ul>
+            <p> &copy; 2026 Madeleine Lyseggen Aas</p>
+        </div>
     </footer>
 </body>
 
