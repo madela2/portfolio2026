@@ -297,13 +297,13 @@ footer {
 
 .footer-links a {
     text-decoration: none;
-    color: var(--color-primary);
+    color: var(--color-text-muted);
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: var(--color-primary-dark);
+    color: var(--color-primary);
 }
 
 .footer-copyright {
