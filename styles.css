@@ -1,12 +1,12 @@
 :root {
     --color-background: #F5F6F7;
-    --color-surface: #FFFFFF;
+    --color-surface: #D6E0E2;
     --color-primary: #607B8A;
     --color-primary-dark: #455763;
     --color-secondary: #C6D1D9;
     --color-accent-soft: #EBE2DA;
     --color-text: #1F1F1F;
-    --color-text-muted: #6B6B6B;
+    --color-text-muted: #4B4B4B;
     --color-border: #D9DEE2;
 }
 
@@ -117,13 +117,6 @@ nav,
     right: 20%;
     width: 30px;
 }
-
-/*  .hero-landscape {
-    top: 68.3%;
-    right: 3%;
-    z-index: -1;
-    opacity: 0.2;
-}  */
 
 .hero-doodle img {
     width: 100%;
@@ -417,38 +410,6 @@ footer {
     line-height: 1.5;
 }
 
-/* Gallery */
-.image-gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-top: 1.25rem;
-}
-
-.gallery-item {
-    display: block;
-    width: 100%;
-    padding: 0;
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-    background: var(--color-background);
-}
-
-.gallery-item img {
-    display: block;
-    width: 50%;
-    height: auto;
-    margin: 0 auto;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.01);
-    transition: transform 0.2s ease;
-}
-
-.gallery-item:focus-visible,
 .lightbox-close:focus-visible,
 .lightbox-nav:focus-visible {
     outline: 3px solid var(--color-primary-dark);
@@ -722,19 +683,13 @@ body.lightbox-open {
 @media (min-width: 700px) {
     .page-doodle-1 {
         width: 100%;
-        max-height: 100px;
+        max-height: 290px;
         margin: 0 auto;
     }
 
     .page-doodle-2 {
         width: 100%;
         max-height: 300px;
-        margin: 0 auto;
-    }
-
-    .page-doodle-3 {
-        width: 100%;
-        max-height: 350px;
         margin: 0 auto;
     }
 
@@ -787,6 +742,14 @@ body.lightbox-open {
         order: 2;
         object-fit: cover;
     }
+
+    .featured-image {
+        width: 30%;
+    }
+
+    .thumbnail-item {
+        width: 15%;
+    }
 }
 
 @media (min-width: 1080px) {
@@ -798,12 +761,7 @@ body.lightbox-open {
 
     .page-doodle-2 {
         width: 100%;
-        max-height: 200px;
-        margin: 0 auto;
-    }
-
-    .page-doodle-3 {
-        width: 100%;
+        max-height: 600px;
         margin: 0 auto;
     }
 }
