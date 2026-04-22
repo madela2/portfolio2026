@@ -117,6 +117,12 @@ nav,
     width: 30px;
 }
 
+.hero-doodle-book {
+    top: 43%;
+    right: 13%;
+    width: 22px;
+}
+
 .hero-doodle img {
     width: 100%;
     height: auto;
