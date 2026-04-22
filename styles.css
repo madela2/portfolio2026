@@ -17,6 +17,21 @@ body {
     color: var(--color-text);
 }
 
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-primary-dark);
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 70px;
+}
+
 nav,
 .navbar {
     display: flex;
