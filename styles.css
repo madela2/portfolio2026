@@ -41,27 +41,25 @@ nav,
     display: inline;
 }
 
-.nav-links a {
+.navbar a {
     text-decoration: none;
     color: inherit;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.navbar a:hover {
     color: var(--color-primary);
 }
 
-.nav-links a.active {
+.navbar a.active {
     border-bottom: 2px solid var(--color-primary);
     padding-bottom: 0.5rem;
 }
 
-.logo {
-    text-decoration: none;
-    color: inherit;
-    font-weight: bold;
-    font-size: 1.2rem;
+.logo img{
+    width: 32px;
+    height: auto;
 }
 
 .hero {
@@ -78,8 +76,9 @@ nav,
 }
 
 .hero h1 {
-    font-size: 2rem;
+    font-size: 1.4rem;
     margin-bottom: 0.25rem;
+    font-weight: 400;
 }
 
 .hero h2 {
