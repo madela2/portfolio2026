@@ -14,9 +14,10 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav class="navbar" aria-label="Main navigation">
         <a href="/index.html" class="logo">
-            <img src="/img/logo.png" alt="Logo">
+            <img src="/img/logo.png" alt="Madeleine Lyseggen Aas - Home">
         </a>
         <ul class="nav-links">
             <li><a href="/about-me.html">About me</a></li>
@@ -24,7 +25,7 @@
         </ul>
     </nav>
 
-    <main class="project-page">
+    <main class="project-page" id="main-content">
         <header class="project-header">
             <a href="/index.html#projects" class="back-link">Back to Projects</a>
             <section class="project-section">
@@ -33,6 +34,7 @@
                         <source src="/img/accessible-website.mp4" type="video/mp4">
                         Your browser does not support the video tag
                     </video>
+                    <figcaption>Demo video: Accessibility-Focused Website</figcaption>
                 </figure>
             </section>
             <h1>Accessibility-Focused Website</h1>
@@ -47,7 +49,7 @@
                 <li><strong>My role:</strong> Frontend developer</li>
                 <li><strong>Tech:</strong> HTML, CSS</li>
             </ul>
-            <a href="https://github.com/madela2/accessible-website" target="_blank" class="project-link">View GitHub repository</a>
+            <a href="https://github.com/madela2/accessible-website" target="_blank" class="project-link" aria-label="View GitHub repository (opens in new tab)">View GitHub repository</a>
         </header>
 
         <section class="project-section">

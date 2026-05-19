@@ -14,17 +14,18 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav class="navbar" aria-label="Main navigation">
         <a href="/index.html" class="logo">
-            <img src="/img/logo.png" alt="Logo">
+            <img src="/img/logo.png" alt="Madeleine Lyseggen Aas - Home">
         </a>
         <ul class="nav-links">
-            <li><a href="about-me.html" class="active">About me</a></li>
+            <li><a href="about-me.html" class="active" aria-current="page">About me</a></li>
             <li><a href="index.html#projects">Projects</a></li>
         </ul>
     </nav>
 
-    <main class="about-page">
+    <main class="about-page" id="main-content">
         <header class="about-header">
             <a href="index.html" class="back-link">Back to Home</a>
             <h1>Nice to see you!</h1>
@@ -32,13 +33,13 @@
                 I'm Madeleine Lyseggen Aas, a web development student at NTNU with an interest in creating
                 accessible, user-friendly, and thoughtful digital solutions.
             </p>
-            <div class="about-doodle about-doodle-book">
+            <div class="about-doodle about-doodle-book" aria-hidden="true">
                 <img src="/icons/book.svg" alt="">    
             </div>
-            <div class="about-doodle about-doodle-movie">
+            <div class="about-doodle about-doodle-movie" aria-hidden="true">
                 <img src="/icons/movie.svg" alt="">
             </div>
-            <div class="about-doodle about-doodle-puzzle">
+            <div class="about-doodle about-doodle-puzzle" aria-hidden="true">
                 <img src="/icons/puzzle.svg" alt="">
             </div>
         </header>
