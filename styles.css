@@ -32,7 +32,11 @@ body {
     top: 70px;
 }
 
-nav,
+.skip-link:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -316,7 +320,6 @@ footer {
 }
 
 .footer-links a {
-    text-decoration: none;
     color: var(--color-text-muted);
     font-weight: 500;
     transition: color 0.3s ease;
